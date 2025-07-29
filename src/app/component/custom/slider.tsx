@@ -8,14 +8,10 @@ import Button from '../ui/button';
 
 export default function Slider() {
 
-
-  
   const slideBackgrounds: Record<string, string> = {
     'swiper-01': "bg-[url('/assets/img/fandgh-slid.png')]",
     'swiper-02': "bg-[url('/assets/img/tea-slid.png')]",
   };
-
-  
 
   const slideData = {
     'swiper-01': {
