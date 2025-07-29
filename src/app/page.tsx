@@ -3,6 +3,7 @@ import React from 'react';
 import Section from '@/app/component/ui/section';
 import Slider from '@/app/component/custom/slider';
 import Category from '@/app/component/custom/category';
+import Cateboxy from './component/custom/cateboxy';
 
 export default function SliderSection() {
 
@@ -11,8 +12,11 @@ export default function SliderSection() {
       <Section className='flex justify-center mt-2 md:mt-0'>
         <Slider />
       </Section>
-      <Section ttl='دسته بندی ها' className='max-w-[1640px] flex flex-col items-center py-8 md:py-12 lg:py-18'>
+{/*       <Section ttl='دسته بندی ها' className='max-w-[1640px] flex flex-col items-center py-8 md:py-12 lg:py-18'>
         <Category />
+      </Section> */}
+      <Section ttl='دسته بندی ها' className='max-w-[1640px] flex flex-col items-center py-8 md:py-12 lg:py-18'>
+        <Cateboxy />  
       </Section>
     </div>
   );

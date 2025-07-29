@@ -4,7 +4,7 @@ import React from 'react'
 
 type props={
     className: string
-    classText: string
+    classText?: string
     children?: React.ReactNode
     name: string
     choose: string
