@@ -1,0 +1,123 @@
+{
+    "users": [],
+    "orders": [],
+    "products": [
+        {
+          "id": "01",
+          "name": "پسته",
+          "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است",
+          "image": "/assets/img/asale.png",
+          "price": "120000"
+          
+        },
+        {
+          "id": "02",
+          "name": "بادام",
+          "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است",
+          "image": "/assets/img/asale.png",
+          "price": "340000"
+
+          
+        },
+        {
+          "id": "03",
+          "name": "بمب",
+          "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است",
+          "image": "/assets/img/asale.png",
+          "price": "350000"
+
+        },
+        {
+          "id": "04",
+          "name": "کلت",
+          "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است",
+          "image": "/assets/img/asale.png",
+          "price": "240000"
+
+          
+        },
+        {
+          "id": "05",
+          "name": "باقالوا",
+          "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است",
+          "image": "/assets/img/asale.png",
+          "price": "160000"
+
+          
+        },
+        {
+          "id": "06",
+          "name": "بستنی",
+          "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است",
+          "image": "/assets/img/asale.png",
+          "price": "670000"
+
+          
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "title": "دسته یکم",
+            "source": "/assets/img/category-Ajil.png"
+        },
+        {
+            "id": 2,
+            "title": "دسته دوم",
+            "source": "/assets/img/category-Ajil.png"
+        },
+        {
+            "id": 3,
+            "title": "دسته سوم",
+            "source": "/assets/img/category-Ajil.png"
+        },
+        {
+            "id": 4,
+            "title": "دسته چهارم",
+            "source": "/assets/img/category-Ajil.png"
+        },
+        {
+            "id": 5,
+            "title": "دسته پنجم",
+            "source": "/assets/img/category-Ajil.png"
+        },
+        {
+            "id": 6,
+            "title": "دسته ششم",
+            "source": "/assets/img/category-Ajil.png"
+        },
+        {
+            "id": 7,
+            "title": "دسته هفتم",
+            "source": "/assets/img/category-Ajil.png"
+        },
+        {
+            "id": 8,
+            "title": "دسته هشتم",
+            "source": "/assets/img/category-Ajil.png"
+        }
+    ],
+    "sliders":[
+        {
+            "id": "01",
+            "title": "یک فنجان آرامش",
+            "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است",
+            "image": "bg-[url('/assets/img/fandgh-slid.png')]",
+            "push": ""
+        },
+        {
+            "id": "02",
+            "title": "بهترین فندق ایران!",
+            "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است",
+            "image": "bg-[url('/assets/img/tea-slid.png')]",
+            "push": ""
+        },
+        {
+            "id": "03",
+            "title": "یک فنجان آرامش",
+            "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است",
+            "image": "bg-[url('/assets/img/psterasl.png')]",
+            "push": ""
+        }
+    ]
+}

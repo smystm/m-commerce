@@ -3,13 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-  --background: #ffffff;
+  --background: #F3F4F6;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #111827;
     --foreground: #ededed;
   }
 }
@@ -25,20 +25,15 @@ body {
 }
 
 /* SliderSwiper Buttons */
-.swiper-button-next,
-.swiper-button-prev {
+.slider .swiper-button-next,
+.slider .swiper-button-prev {
   color: #fff !important;
   font-size: 12px !important;
   font-size-adjust: from-font;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  @apply text-white;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
+.slider .swiper-button-next:hover,
+.slider .swiper-button-prev:hover {
   @apply text-white;
 }
 
@@ -61,7 +56,32 @@ body {
       opacity: 1;
   }
 }
+ /* swiper Marquee */
+.marqbox .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
 
+
+/* Swiper Product */
+.product .swiper {
+  padding: 15px;
+}
+.product .swiper-button-next::after,
+.product .swiper-button-prev::after {
+  @apply text-black dark:text-white text-sm;
+}
+
+.product .swiper-button-next{
+  @apply  bg-white dark:bg-gray-800/75 border border-black/20 dark:border-white/5 rounded-2xl me-[-8px] mt-12; 
+}
+.product .swiper-button-prev{
+  @apply  bg-white dark:bg-gray-800/75 border border-black/20 dark:border-white/5 rounded-2xl ms-[-8px] mt-12;
+}
+
+.product .swiper-button-next:hover,
+.product .swiper-button-prev:hover {
+  @apply text-white;
+}
 
 
 

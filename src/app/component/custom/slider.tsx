@@ -5,41 +5,12 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Button from '../ui/button';
+import { IGetSlideData } from '@/app/page';
 
-export default function Slider() {
-
-  const slideBackgrounds: Record<string, string> = {
-    'swiper-01': "bg-[url('/assets/img/fandgh-slid.png')]",
-    'swiper-02': "bg-[url('/assets/img/tea-slid.png')]",
-  };
-
-  const slideData = {
-    'swiper-01': {
-      id: '01',
-      title: 'یک فنجان آرامش',
-      description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است',
-      image: "bg-[url('/assets/img/fandgh-slid.png')]",
-      push: ''
-    },
-    'swiper-02': {
-      id: '02',
-      title: 'بهترین فندق ایران!',
-      description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است',
-      image: "bg-[url('/assets/img/tea-slid.png')]",
-      push: ''
-    },
-    'swiper-03': {
-      id: '03',
-      title: 'یک فنجان آرامش',
-      description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است',
-      image: "bg-[url('/assets/img/fandgh-slid.png')]",
-      push: ''
-    }
-  };
-    
+export default function Slider({data}: {data: IGetSlideData[]}) {  
   return (
     <>
-      <div className="w-[95%] md:w-full">
+      <div className="slider w-[95%] md:w-full">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={10}
@@ -49,8 +20,8 @@ export default function Slider() {
           navigation={true}
           className="mySwiper"
         >
-          {Object.entries(slideData).map(([key, sld]) => (
-            <SwiperSlide className='overflow-hidden rounded-xl md:rounded-none' key={key}>
+          {(data).map((sld, index) => (
+            <SwiperSlide className='overflow-hidden rounded-xl md:rounded-none' key={index}>
               <div className={`w-full h-[250px] md:h-[330px] lg:h-[60vh] xl:h-[70vh] rounded-xs md:rounded-none flex flex-col justify-center items-start text-white bg-cover bg-center bg-no-repeat bg-gradient-to-r from-[#ffffff09] to-[#00000077] ${sld.image}`}>
                 <div className="container-fluid bg-black/30 rounded-xl p-4 md:p-6 lg:p-12 mx-auto">                  
                   <div className="max-w-[200px] md:max-w-[310px]">
