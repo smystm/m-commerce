@@ -4,7 +4,7 @@ import Slider from '@/app/component/custom/slider';
 import Category from '@/app/component/custom/category';
 import Cateboxy from './component/custom/cateboxy';
 import Marqbox from './component/custom/marqbox';
-import Product from './component/custom/product';
+import {PrdBoxing } from './component/custom/product';
 import Ttlsec from './component/ui/ttlsec';
 import Showcase from './component/custom/showcase';
 
@@ -21,6 +21,7 @@ export interface IGetProductData {
   description: string;
   image: string;
   price: string;
+  discount: string;
 }
 export interface IGetCategoryData {
   id: string;
@@ -54,11 +55,14 @@ export default async function SliderSection() {
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-6 text-white"><path d="M3 7h18l-1 10a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4L3 7z"/><path d="M7 7a5 5 0 0 1 10 0"/></svg>
           </div>     
         </Ttlsec>
-        <Product data={productsData} />
+        <PrdBoxing data={productsData} />
       </Section>
-      <Section ttl='انواع آجیل' className='max-w-[1640px] flex flex-col items-center py-8 md:py-12 lg:py-18'>
+      <Section ttl='انواع آجیل' className='max-w-[1640px] h-330 md:h-360 lg:h-260 flex flex-col items-center py-8 md:py-12 lg:py-18'>
         <Cateboxy data={categoriesData} />  
         <Showcase />
+      </Section>
+      <Section className='max-w-[1640px] flex flex-col items-center py-8 md:py-12 lg:py-18'>
+         2
       </Section>
     </div>
   );
