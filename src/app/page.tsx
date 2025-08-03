@@ -7,6 +7,7 @@ import Marqbox from './component/custom/marqbox';
 import {PrdBoxing } from './component/custom/product';
 import Ttlsec from './component/ui/ttlsec';
 import Showcase from './component/custom/showcase';
+import { Poster } from './component/custom/poster';
 
 export interface IGetSlideData {
   id: string;
@@ -61,8 +62,11 @@ export default async function SliderSection() {
         <Cateboxy data={categoriesData} />  
         <Showcase />
       </Section>
-      <Section className='max-w-[1640px] flex flex-col items-center py-8 md:py-12 lg:py-18'>
-         2
+      <Section className='w-4/5 sm:w-7/10 lg:w-3/5 xl:w-4/5 flex flex-col items-center py-8 md:py-12 lg:py-18'>
+         <Poster data={slidersData}/>
+      </Section>
+      <Section ttl='پزس های شما و پاسخ های ما' className='max-w-[1640px] flex flex-col items-center py-8 md:py-12 lg:py-18' isTtl={true}>
+        3
       </Section>
     </div>
   );
