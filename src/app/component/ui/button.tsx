@@ -8,16 +8,16 @@ type props={
     children?: React.ReactNode
     name: string
     choose: string
-    send: string
-    type?: any   
+    send: any
+    type?: any
 }
 
-function Clicked(source:string, choose:string){
+function Clicked(get:any, choose:string){
     const router = useRouter()
     return ()=>{
       switch(choose){
         case 'push':
-          router.push(`/${source}`)
+          router.push(`/${get}`)
           break
         default:
           break

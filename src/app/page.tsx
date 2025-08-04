@@ -8,6 +8,7 @@ import {PrdBoxing } from './component/custom/product';
 import Ttlsec from './component/ui/ttlsec';
 import Showcase from './component/custom/showcase';
 import { Poster } from './component/custom/poster';
+import Accordion from './component/custom/accordion';
 
 export interface IGetSlideData {
   id: string;
@@ -29,14 +30,21 @@ export interface IGetCategoryData {
   title: string;
   source: string;
 }
+export interface IGetAccordions {
+  id: string;
+  question: string;
+  answer: string ;
+}
 
 export default async function SliderSection() {
   const sliders = await fetch('http://localhost:3001/sliders');
   const products = await fetch('http://localhost:3001/products');
   const categories = await fetch('http://localhost:3001/categories');
+  const accordions = await fetch('http://localhost:3001/accordions');
   const slidersData = (await sliders.json()) as IGetSlideData[]; 
   const productsData = (await products.json()) as IGetProductData[];
   const categoriesData = (await categories.json()) as IGetCategoryData[];
+  const accordionsData = (await accordions.json()) as IGetAccordions[];
 
   return (
     <div className='page'>
@@ -65,8 +73,8 @@ export default async function SliderSection() {
       <Section className='w-4/5 sm:w-7/10 lg:w-3/5 xl:w-4/5 flex flex-col items-center py-8 md:py-12 lg:py-18'>
          <Poster data={slidersData}/>
       </Section>
-      <Section ttl='پزس های شما و پاسخ های ما' className='max-w-[1640px] flex flex-col items-center py-8 md:py-12 lg:py-18' isTtl={true}>
-        3
+      <Section ttl='پرس های شما و پاسخ های ما' className='max-w-[1640px] flex flex-col items-center py-8 md:py-12 lg:py-18' isTtl={true}>
+        <Accordion data={accordionsData} />
       </Section>
     </div>
   );
