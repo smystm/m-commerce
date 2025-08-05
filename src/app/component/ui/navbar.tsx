@@ -44,7 +44,7 @@ export default function Header() {
                     <li className="list-none dark:text-white flex items-center gap-1 text">
                       دوره ها
                       <svg className="dark:stroke-white stroke-gray-700" width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 1L6.88384 5.11616C6.39773 5.60227 5.60227 5.60227 5.11616 5.11616L1 1" strokeWidth="0.8" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M11 1L6.88384 5.11616C6.39773 5.60227 5.60227 5.60227 5.11616 5.11616L1 1" strokeWidth="0.8" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path>
                       </svg>
                     </li>
                   </a>
@@ -52,7 +52,7 @@ export default function Header() {
                     <li className="list-none dark:text-white relative group flex items-center gap-1 text">
                       دوره ها
                       <svg className="dark:stroke-white stroke-gray-700" width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 1L6.88384 5.11616C6.39773 5.60227 5.60227 5.60227 5.11616 5.11616L1 1" strokeWidth="0.8" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M11 1L6.88384 5.11616C6.39773 5.60227 5.60227 5.60227 5.11616 5.11616L1 1" strokeWidth="0.8" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path>
                       </svg>
                       <ul className="opacity-0 invisible rounded-[10px] inset-0 group-hover:opacity-100 group-hover:visible absolute w-[100px] h-[200px] transition-all ease-in-out dark:bg-[#111827] bg-[#e7e7e7] top-7 p-3 text-center">
                         <li className="list-none m-2 dark:text-white">زیر منو</li>
@@ -66,7 +66,7 @@ export default function Header() {
                     <li className="list-none dark:text-white flex items-center gap-1 text">
                       دوره ها
                       <svg className="dark:stroke-white stroke-gray-700" width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 1L6.88384 5.11616C6.39773 5.60227 5.60227 5.60227 5.11616 5.11616L1 1" strokeWidth="0.8" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M11 1L6.88384 5.11616C6.39773 5.60227 5.60227 5.60227 5.11616 5.11616L1 1" strokeWidth="0.8" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path>
                       </svg>
                     </li>
                   </a>
@@ -74,7 +74,7 @@ export default function Header() {
                     <li className="list-none dark:text-white flex items-center gap-1 text">
                       دوره ها
                       <svg className="dark:stroke-white stroke-gray-700" width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 1L6.88384 5.11616C6.39773 5.60227 5.60227 5.60227 5.11616 5.11616L1 1" strokeWidth="0.8" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M11 1L6.88384 5.11616C6.39773 5.60227 5.60227 5.60227 5.11616 5.11616L1 1" strokeWidth="0.8" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path>
                       </svg>
                     </li>
                   </a>
@@ -82,7 +82,7 @@ export default function Header() {
                     <li className="list-none dark:text-white flex items-center gap-1 text">
                       دوره ها
                       <svg className="dark:stroke-white stroke-gray-700" width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 1L6.88384 5.11616C6.39773 5.60227 5.60227 5.60227 5.11616 5.11616L1 1" strokeWidth="0.8" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M11 1L6.88384 5.11616C6.39773 5.60227 5.60227 5.60227 5.11616 5.11616L1 1" strokeWidth="0.8" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path>
                       </svg>
                     </li>
                   </a>
@@ -200,14 +200,14 @@ function MenuPanel({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: bool
                      fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path
                         d="M1.02804 11.4222C1.39976 16.5709 5.912 20.7598 11.3122 20.9897C15.1223 21.1497 18.5297 19.4301 20.5742 16.7208C21.4209 15.6111 20.9665 14.8713 19.552 15.1212C18.8601 15.2412 18.1477 15.2912 17.4043 15.2612C12.3551 15.0612 8.2249 10.9723 8.20425 6.14353C8.19393 4.84386 8.47271 3.61417 8.97866 2.49446C9.53624 1.25478 8.86508 0.66493 7.5744 1.19479C3.48551 2.86437 0.687303 6.85334 1.02804 11.4222Z"
-                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                   </svg>
                </div>
                <div
                   className="close bg-[#5757570d] w-[50px] h-[50px] flex items-center justify-center p-3 rounded-full dark:bg-[#ffffff0d]">
                   <svg className="svg dark:stroke-[#FFFFFF] stroke-[#242a38]" xmlns="http://www.w3.org/2000/svg" width="12"
                      height="12" viewBox="0 0 12 12">
-                     <path fill="#000" fill-opacity="1" fill-rule="nonzero"
+                     <path fill="#000" fillOpacity="1" fillRule="nonzero"
                         d="m6 5.293 4.789-4.79.707.708-4.79 4.79 4.79 4.789-.707.707-4.79-4.79-4.789 4.79-.707-.707L5.293 6 .502 1.211 1.21.504 6 5.294z">
                      </path>
                   </svg>
@@ -228,9 +228,9 @@ function MenuPanel({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: bool
                className="flex cursor-pointer flex-row items-center justify-between py-1 font-semibold text-[#242424] dark:text-white marker:[font-size:0px]">
                دوره ها
                <svg className="h-6 w-6 rotate-0 transform text-gray-400 group-open:rotate-180"
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                   stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path>
                </svg>
             </summary>
             <div className="text-gray-500">
@@ -256,9 +256,9 @@ function MenuPanel({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: bool
                className="flex cursor-pointer flex-row items-center justify-between py-1 font-semibold text-[#242424] dark:text-white marker:[font-size:0px]">
                دوره ها
                <svg className="h-6 w-6 rotate-0 transform text-gray-400 group-open:rotate-180"
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                   stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path>
                </svg>
             </summary>
             <div className="text-gray-500">
@@ -284,9 +284,9 @@ function MenuPanel({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: bool
                className="flex cursor-pointer flex-row items-center justify-between py-1 font-semibold text-[#242424] dark:text-white marker:[font-size:0px]">
                دوره ها
                <svg className="h-6 w-6 rotate-0 transform text-gray-400 group-open:rotate-180"
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                   stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path>
                </svg>
             </summary>
             <div className="text-gray-500">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./component/ui/navbar";
 import Section from "./component/ui/section";
+import Footer from "./component/ui/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,8 +17,9 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth" lang="FA">
       <body dir="rtl" className={`antialiased font-[dana] overflow-x-hidden max-w-full bg-[#F3F4F6] dark:bg-[#111827] dark:text-white scroll-smooth`}>
-          <Navbar />
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

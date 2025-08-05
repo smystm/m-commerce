@@ -15,7 +15,7 @@ export default function Accordion({data}: {data: IGetAccordions[]}) {
     <div className='flex flex-col items-center gap-2 w-full transition-all duration-500 py-6 mt-3 md:mt-6'>
         {data.map((data, index)=> (
         isOpen = openIndex === index,
-        <div className={`w-3/5 bg-white dark:bg-gray-800 rounded-2xl ${isOpen? "shadow-lg" : ""} transition-all duration-400`} key={index}>
+        <div className={`w-11/12 md:w-4/5 lg:w-3/5 bg-white dark:bg-gray-800 rounded-2xl ${isOpen? "shadow-lg" : ""} transition-all duration-400`} key={index}>
           <button className={`w-full text-left px-4 py-3 flex items-center justify-between ${isOpen ? "underline font-semibold" : "font-medium"} transition-all duration-300 `} onClick={()=> toggleAccordion(index)}>
             <span>{data.question}</span>
             <span
