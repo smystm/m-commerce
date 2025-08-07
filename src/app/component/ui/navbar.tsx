@@ -183,7 +183,7 @@ export default function Header() {
   )
 }
 
-function MenuPanel({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: boolean, setMobileMenuOpen: any }) {
+function MenuPanel({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: boolean, setMobileMenuOpen:React.Dispatch<React.SetStateAction<boolean>> }) {
   return(
     <div
       className={`panel-mobile fixed h-full inset-0 bg-[#FFFFFF] dark:bg-[#242a38] overflow-y-auto w-[280px] transition-all duration-300 right-0 z-50 px-3

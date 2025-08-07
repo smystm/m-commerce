@@ -91,7 +91,7 @@ export default function Marqbox({dirSlider}:props) {
         {products.map((product, index) => (
             <SwiperSlide key={index} className="hover:cursor-pointer transition-all duration-300" dir='rtl'>
               <div className='py-4'>
-                <div className='flex flex-row items-center gap-6 justify-start bg-white dark:bg-gray-800 py-3 md:py-4 rounded-xl px-8 border border-black/20 dark:border-white/5 hover:shadow-md hover:shadow-lg transition-all duration-300'>
+                <div className='flex flex-row items-center gap-6 justify-start bg-white dark:bg-gray-800 py-3 md:py-4 rounded-xl px-8 border border-black/20 dark:border-white/5 hover:shadow-lg transition-all duration-300'>
                   <div className="flex overflow-hidden rounded-xl border border-black/20 dark:border-white/5">
                     <img className='w-24 sm:w-36 md:w-24 lg:w-24' src={product.image} alt="" />
                   </div>

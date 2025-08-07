@@ -8,11 +8,11 @@ type props={
     children?: React.ReactNode
     name: string
     choose: string
-    send: any
-    type?: any
+    send: string
+    type?: "button" | "submit" | "reset" | undefined
 }
 
-function Clicked(get:any, choose:string){
+function Clicked(get:string, choose:string){
     const router = useRouter()
     return ()=>{
       switch(choose){
