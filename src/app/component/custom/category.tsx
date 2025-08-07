@@ -1,6 +1,6 @@
 import React from 'react'
 import Ttlsec from '../ui/ttlsec'
-import { IGetCategoryData } from '@/app/page'
+import { IGetCategoryData } from '@/types/index'
 
 export default function Category({data}: {data: IGetCategoryData[]}) {
   return (
@@ -15,7 +15,7 @@ export default function Category({data}: {data: IGetCategoryData[]}) {
                 <div key={index} className="group flex flex-col items-center rounded-3xl py-8 hover:scale-95 hover:cursor-pointer duration-300">
                     <div className="w-40 h-40 flex flex-col items-center justify-center gap-4 rounded-3xl">
                         <div className='flex justify-center items-center w-30 h-30 bg-black/4 dark:bg-white/4 border border-black/10 dark:border-white/10 shadow-lg rounded-full group-hover:rotate-360 duration-500'>
-                            <img src={category.source} alt="category-Ajil" className='w-10' />
+                            <img src={category.image_url} alt="category-Ajil" className='w-10' />
                         </div>
                         <span className='font-normal text-lg text-[#111827] dark:text-[#F3F4F6]'>{category.title}</span>
                     </div>

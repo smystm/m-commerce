@@ -2142,18 +2142,18 @@ body {
 .swiper-pagination {
   text-align: right;
   position: relative;
-  .swiper-pagination-bullet {
-    background-color: white;
-    opacity: .3;
-    transition: .2s;
-  }
-  .swiper-pagination-bullet-active {
-    transition: .3s;
-    width: 20px;
-    border-radius: 8px;
-    background-color: #47d147;
-    opacity: 1;
-  }
+}
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: white;
+  opacity: .3;
+  transition: .2s;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  transition: .3s;
+  width: 20px;
+  border-radius: 8px;
+  background-color: #47d147;
+  opacity: 1;
 }
 .marqbox .swiper-wrapper {
   transition-timing-function: linear !important;

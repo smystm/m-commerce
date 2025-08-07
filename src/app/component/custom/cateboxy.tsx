@@ -1,13 +1,13 @@
 'use client'
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import Button from '../ui/button'
 import Ttlsec from '../ui/ttlsec'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { IGetCategoryData } from '@/app/page'
+import { IGetCategoryData } from '@/types/index'
 
 export default function Cateboxy({data}:{data: IGetCategoryData[]} ) {
 
@@ -65,7 +65,7 @@ export default function Cateboxy({data}:{data: IGetCategoryData[]} ) {
                     <div key={index} className="group flex flex-col items-center rounded-3xl py-8 hover:scale-95 hover:cursor-pointer duration-300">
                         <div className="w-38 sm:w-48 md:w-45 lg:w-45 xl:w-55 2xl:w-80 h-20 lg:h-22 flex 2xl:flex-row-reverse bg-white dark:bg-white/10 items-center justify-center gap-2 sm:gap-4 md:gap-6 lg:gap-4 xl:gap-4 2xl:gap-12 rounded-3xl shadow-lg">
                             <div className='flex justify-center items-center w-14 h-14 md:w-16 md:h-16 xl:w-18 xl:h-18 2xl:w-30 2xl:h-30 bg-white/30 dark:bg-white/4 border border-black/10 dark:border-white/10 shadow-sm rounded-full group-hover:rotate-360 duration-500'>
-                                <img src={category.source} alt="category-Ajil" className='w-6 md:w-8 lg:w-10' />
+                                <img src={category.image_url} alt="category-Ajil" className='w-6 md:w-8 lg:w-10' />
                             </div>
                             <div className="flex flex-col gap-2 text-sm">
                                 <span className='font-normal text-sm md:text-md xl:text-lg text-[#111827] dark:text-[#F3F4F6]'>{category.title}</span>                      

@@ -9,42 +9,16 @@ import Ttlsec from './component/ui/ttlsec';
 import Showcase from './component/custom/showcase';
 import { Poster } from './component/custom/poster';
 import Accordion from './component/custom/accordion';
-
-export interface IGetSlideData {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  push: string;
-}
-export interface IGetProductData {
-  id: string;
-  name: string;
-  description: string;
-  image: string;
-  price: string;
-  discount: string;
-}
-export interface IGetCategoryData {
-  id: string;
-  title: string;
-  source: string;
-}
-export interface IGetAccordions {
-  id: string;
-  question: string;
-  answer: string ;
-}
+import { getProducts, getCategories, getSliders, getFaqs } from '@/lib/db';
+import { IGetSlideData, IGetProductData, IGetCategoryData, IGetFaqs } from '@/types';
 
 export default async function SliderSection() {
-  const sliders = await fetch('http://localhost:3001/sliders');
-  const products = await fetch('http://localhost:3001/products');
-  const categories = await fetch('http://localhost:3001/categories');
-  const accordions = await fetch('http://localhost:3001/accordions');
-  const slidersData = (await sliders.json()) as IGetSlideData[]; 
-  const productsData = (await products.json()) as IGetProductData[];
-  const categoriesData = (await categories.json()) as IGetCategoryData[];
-  const accordionsData = (await accordions.json()) as IGetAccordions[];
+ 
+  const slidersData = await getSliders() as IGetSlideData[];
+  const productsData = await getProducts() as IGetProductData[];
+  const categoriesData = await getCategories() as IGetCategoryData[];
+  const accordionsData = await getFaqs() as IGetFaqs[];
+  
 
   return (
     <div className='page'>

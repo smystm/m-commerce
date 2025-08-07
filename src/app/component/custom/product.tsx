@@ -6,10 +6,11 @@ import 'swiper/css/grid';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import React from 'react'
-import { IGetProductData } from '@/app/page';
+import { IGetProductData } from '@/types/index';
 
 function PrdBoxing({data}: {data: IGetProductData[]}) {
   let numDis: number = 0;
+  let numPrc: number = 0;
   return (
     <div className='flex flex-row w-full mt-4 product rounded-xl px-16 sm:px-12 md:px-4 lg:px-0'>
         <Swiper
@@ -44,11 +45,12 @@ function PrdBoxing({data}: {data: IGetProductData[]}) {
              className=""
         >
         {data.map((product, index) => (
-            numDis= parseInt(product.discount),
+            numDis= product.discount,
+            numPrc = product.price ,
             <SwiperSlide key={index} className="transition-all duration-300 hover:cursor-pointer" dir='rtl'>
               <div className='py-6 relative hover:scale-95 transition-all duration-300'>
                 <div className="w-48 bg-gradient-to-b from-[#0e804992] via-[#f7fffb02] to-[#2FAF7200] absolute z-10 left-[50%] translate-x-[-50%] top-20 flex justify-center overflow-hidden rounded-xl rounded-t-full transition-all duration-300">
-                  <img className='w-full' src={product.image} alt="" />
+                  <img className='w-full' src={product.image_url} alt="" />
                 </div>
                 <div className='flex relative overflow-hidden mt-40 flex-col items-center justify-start gap-6 px-8 py-3 transition-all duration-300 bg-white border rounded-2xl group hover:shodow-xl dark:bg-gray-800 md:py-6 border-black/20 dark:border-white/5'>
                   <div className='flex flex-col gap-2 py-2 mt-3'>
@@ -69,18 +71,18 @@ function PrdBoxing({data}: {data: IGetProductData[]}) {
                             </div>
                             <div className="flex items-center justify-end gap-1 text-xs text-gray-400 dark:text-gray-500 line-through">
                               <span className='text-xs'>تومان</span>
-                              <span>{product.price}</span>
+                              <span>{numPrc}</span>
                             </div>
                             <div className="flex items-center gap-1 text-gray-500 dark:text-gray-400 text-md">
                                 <span className='text-xs'>تومان</span>
-                                <span>{parseInt(product.price) - (parseInt(product.price) * numDis / 100) }</span>
+                                <span>{numPrc - (numPrc * numDis / 100)}</span>
                             </div>
                           </> 
                           :
                           <>
                             <div className="flex items-center gap-1 text-gray-500 dark:text-gray-400 text-md">
                               <span className='text-xs'>تومان</span>
-                              <span>{parseInt(product.price) - (parseInt(product.price) * numDis / 100) }</span>
+                              <span>{(numPrc) - (numPrc * numDis / 100) }</span>
                             </div>              
                           </>
                         }
@@ -98,6 +100,7 @@ function PrdBoxing({data}: {data: IGetProductData[]}) {
 
 function ProdCart({data}: {data: IGetProductData[]}) {
   let numDis:number = 0;
+  let numPrc:number = 0;
   return(
     <div className='flex flex-row w-full product rounded-xl px-0 sm:px-8 md:px-4 lg:px-0'>
       <Swiper
@@ -142,14 +145,15 @@ function ProdCart({data}: {data: IGetProductData[]}) {
             className="h-180 md:h-225 lg:h-[auto] w-full flex dir:ltr md:dir-rtl"
         >
           {data.map((product, index) => (        
-            numDis= parseInt(product.discount),
+            numDis= product.discount,
+            numPrc= product.price,
             numDis > 0 ? 
               <SwiperSlide key={index} className="transition-all duration-300 hover:cursor-pointer" dir='rtl'>
                 <div className='relative hover:scale-95 transition-all duration-300 mx-auto flex justify-center'>
                   <div className='flex max-w-100 sm:max-w-125 md:max-w-75 flex-row md:flex-col relative overflow-hidden items-center justify-start gap-6 md:px-8 px-4 py-1 transition-all duration-300 bg-white border rounded-2xl group hover:shodow-xl dark:bg-gray-800 md:py-6 border-black/20 dark:border-white/5'>
                     <div className="1">
                       <div className="w-24 md:w-42 bg-gradient-to-b from-[#0e804954] via-[#f7fffb02] to-[#0e804924] flex justify-center overflow-hidden rounded-lg rounded-br-4xl rounded-tl-4xl transition-all duration-300">
-                        <img className='w-full' src={product.image} alt="" />
+                        <img className='w-full' src={product.image_url} alt="" />
                       </div>
                     </div>
                     <div className="2">
@@ -171,18 +175,18 @@ function ProdCart({data}: {data: IGetProductData[]}) {
                                 </div>
                                 <div className="flex items-center justify-end gap-1 text-xs text-gray-400 dark:text-gray-500 line-through">
                                   <span className='text-xs'>تومان</span>
-                                  <span>{product.price}</span>
+                                  <span>{numPrc}</span>
                                 </div>
                                 <div className="flex items-center gap-1 text-gray-500 dark:text-gray-400 text-md">
                                     <span className='text-xs'>تومان</span>
-                                    <span>{parseInt(product.price) - (parseInt(product.price) * numDis / 100) }</span>
+                                    <span>{numPrc - (numPrc * numDis / 100) }</span>
                                 </div>
                               </> 
                               :
                               <>
                                 <div className="flex items-center gap-1 text-gray-500 dark:text-gray-400 text-md">
                                   <span className='text-xs'>تومان</span>
-                                  <span>{parseInt(product.price) - (parseInt(product.price) * numDis / 100) }</span>
+                                  <span>{numPrc - (numPrc * numDis / 100) }</span>
                                 </div>              
                               </>
                             }

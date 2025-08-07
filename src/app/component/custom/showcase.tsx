@@ -1,13 +1,13 @@
 import Button from "../ui/button";
 import { Tab,Tabox,TabInput,TabLable } from "../ui/tab";
 import {ProdCart} from "./product";
-import { IGetProductData } from "@/app/page";
+import { getProducts } from '@/lib/db';
+import { IGetProductData } from "@/types/index";
 
 import React from 'react'
 
 export default async function Showcase() {
-  const products = await fetch('http://localhost:3001/products');
-  const productsData = (await products.json()) as IGetProductData[];
+  const productsData = await getProducts() as IGetProductData[];
 
   return (
     <div className="showcase w-full px-4">

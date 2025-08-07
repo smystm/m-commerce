@@ -1,8 +1,8 @@
 'use client'
 import React, { useState } from 'react'
-import { IGetAccordions } from '@/app/page'
+import { IGetFaqs } from '@/types/index'
 
-export default function Accordion({data}: {data: IGetAccordions[]}) {
+export default function Accordion({data}: {data: IGetFaqs[]}) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
