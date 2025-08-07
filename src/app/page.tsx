@@ -18,7 +18,6 @@ export default async function SliderSection() {
   const productsData = await getProducts() as IGetProductData[];
   const categoriesData = await getCategories() as IGetCategoryData[];
   const accordionsData = await getFaqs() as IGetFaqs[];
-  
 
   return (
     <div className='page'>
