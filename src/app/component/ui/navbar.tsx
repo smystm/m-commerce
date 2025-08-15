@@ -31,12 +31,12 @@ export default function Header() {
 
   return (
     <>
-      <header className="w-full max-w-[1640px] sticky flex flex-col justify-center items-center py-10 md:py-11 lg:py-10 mx-auto header transition-all duration-300 z-30">
-        <div className={`w-full fixed top-0 left-[50%] translate-x-[-50%] lg:flex desktop-header h-[74px] bg-[#ffffffed] dark:bg-[#323948d5] flex-row justify-center items-center shadow-[0px_4px_4px_0px_#0000000D] transition-transform duration-300 ${desktopHeaderVisible ? 'translate-y-0' : '-translate-y-[100px]'}`}>
+      <header className="w-full max-w-[1640px] sticky flex flex-col justify-center items-center py-10 md:py-10 lg:py-9.5 mx-auto header transition-all duration-300 z-30">
+        <div className={`w-full hidden fixed top-0 left-[50%] translate-x-[-50%] lg:flex desktop-header h-[74px] bg-[#ffffffed] dark:bg-[#323948d5] flex-row justify-center items-center shadow-[0px_4px_4px_0px_#0000000D] transition-transform duration-300 ${desktopHeaderVisible ? 'translate-y-0' : '-translate-y-[100px]'}`}>
           <div className='w-full max-w-[1640px] flex flex-row justify-between items-center px-3'>
             <div className="logo-and-menu flex gap-2 items-center flex-row p-1">
               <div className="logo w-[84px]">
-                <img className="w-full" src="assets/img/NewLogo 1.png" alt="SEO" />
+                <img className="w-full" src="/assets/img/NewLogo 1.png" alt="SEO" />
               </div>
               <div className="p-menu">
                 <ul className="menu flex gap-5">
@@ -92,25 +92,25 @@ export default function Header() {
             <div className="right-of-header flex flex-row items-center">
               <div className="search-box bg-[#F3F4F6] dark:bg-[#FFFFFF0D] flex flex-row-reverse p-1.5 border-l-[1px] border-[#64748B] items-center gap-2 width-[300px] rounded-[15px]">
                 <button className="bg-[transparent] border-none w-[30px]" type="submit">
-                  <img className="w-full pl-1" src="assets/img/search-icon.svg" alt="SEO" />
+                  <img className="w-full pl-1" src="/assets/img/search-icon.svg" alt="SEO" />
                 </button>
                 <input className="border-[0] bg-[transparent] dark:text-white focus:outline-none font-[dana] w-auto p-1" placeholder="دنبال چه دوره ای هستی؟" type="text" />
               </div>
               <div className="h-[29px] w-[1px] bg-[#64748B] mx-5"></div>
               <div className="them-changer flex items-center w-[20px]">
-                <img className="w-full" src="assets/img/Moon.svg" alt="SEO" />
+                <img className="w-full" src="/assets/img/Moon.svg" alt="SEO" />
               </div>
               <div className="h-[29px] w-[1px] bg-[#64748B] mx-5"></div>
               <div className="basket w-[20px]">
-                <a className="flex items-center" href=""><img className="w-full" src="assets/img/icon-cart.svg" alt="SEO" /></a>
+                <a className="flex items-center" href=""><img className="w-full" src="/assets/img/icon-cart.svg" alt="SEO" /></a>
               </div>
               <button className="account-btn font-[dana] border-none gap-3 flex items-center z-30 relative group/item justify-center p-2 rounded-[15px] text-[16px] bg-[#257E6C] text-white mr-4">
                 حساب کاربری
-                <img src="assets/img/sign.svg" alt="SEO" />
+                <img src="/assets/img/sign.svg" alt="SEO" />
                 <div dir="ltr" className="shadow-[0px_0px_4px_0px_#00000040] group-focus/item:visible rounded-[15px] p-3 invisible flex flex-col items-end bg-white absolute top-[50px] left-[10px]">
                   <div className="user flex justify-end items-center flex-row-reverse gap-3">
                     <div className="w-[60px] object-cover">
-                      <img className="w-full" src="assets/img/profile.svg" alt="SEO" />
+                      <img className="w-full" src="/assets/img/profile.svg" alt="SEO" />
                     </div>
                     <div className="text-right flex flex-col">
                       <span className="text-[16px] text-[#424242]">محسن قادری</span>
@@ -119,13 +119,13 @@ export default function Header() {
                   </div>
                   <span className="h-[1px] w-[210px] bg-[#B7B7B7]"></span>
                   <div className="list text-right flex items-end flex-col gap-3 my-4">
-                    <span className="text-[16px] text-[#424242] flex items-center gap-2">پیشخوان <img src="assets/img/home.svg" alt="SEO" /></span>
-                    <span className="text-[16px] text-[#424242] flex items-center gap-2">دوره های من <img src="assets/img/folder-open.svg" alt="SEO" /></span>
-                    <span className="text-[16px] text-[#424242] flex items-center gap-2">تیکت ها <img src="assets/img/messages.svg" alt="SEO" /></span>
-                    <span className="text-[16px] text-[#424242] flex items-center gap-2">جزئیات حساب <img src="assets/img/user-square.svg" alt="SEO" /></span>
+                    <span className="text-[16px] text-[#424242] flex items-center gap-2">پیشخوان <img src="/assets/img/home.svg" alt="SEO" /></span>
+                    <span className="text-[16px] text-[#424242] flex items-center gap-2">دوره های من <img src="/assets/img/folder-open.svg" alt="SEO" /></span>
+                    <span className="text-[16px] text-[#424242] flex items-center gap-2">تیکت ها <img src="/assets/img/messages.svg" alt="SEO" /></span>
+                    <span className="text-[16px] text-[#424242] flex items-center gap-2">جزئیات حساب <img src="/assets/img/user-square.svg" alt="SEO" /></span>
                   </div>
                   <span className="h-[1px] w-[210px] bg-[#B7B7B7]"></span>
-                  <span className="text-right text-[#FA7070] mt-4 flex items-center gap-2">خروج <img src="assets/img/logout.svg" alt="SEO" /></span>
+                  <span className="text-right text-[#FA7070] mt-4 flex items-center gap-2">خروج <img src="/assets/img/logout.svg" alt="SEO" /></span>
                 </div>
               </button>
             </div>         
@@ -139,18 +139,18 @@ export default function Header() {
           </button>
 
           <div className="logo-mobile w-[80px]">
-              <img className="w-full" src="assets/img/NewLogo 1.png" alt="SEO" />
+              <img className="w-full" src="/assets/img/NewLogo 1.png" alt="SEO" />
           </div>
           <div className="login-btn-mobile">
               <button
                 className="sign-in font-[dana] border-none gap-3 flex items-center relative group/item justify-center p-2 rounded-[15px] text-[16px] bg-[#257E6C] text-white mr-4"
                 >
-                <img src="assets/img/sign.svg" alt="SEO" />
+                <img src="/assets/img/sign.svg" alt="SEO" />
                 <div dir="ltr"
                     className="shadow-[0px_0px_4px_0px_#00000040] group-focus/item:visible rounded-[15px] p-3 invisible flex flex-col items-end bg-white absolute top-[50px] left-[10px]">
                     <div className="user flex justify-end items-center flex-row-reverse gap-3">
                       <div className="w-[60px] object-cover">
-                          <img className="w-full" src="assets/img/profile.svg" alt="SEO" />
+                          <img className="w-full" src="/assets/img/profile.svg" alt="SEO" />
                       </div>
                       <div className="text-right flex flex-col">
                           <span className="text-[16px] text-[#424242]">محسن قادری</span>
@@ -160,18 +160,18 @@ export default function Header() {
                     <span className="h-[1px] w-[210px] bg-[#B7B7B7]"></span>
                     <div className="list text-right flex items-end flex-col gap-3 my-4">
                       <span className="text-[16px] text-[#424242] flex items-center gap-2">پیشخوان <img
-                            src="assets/img/home.svg" alt="SEO" /></span>
+                            src="/assets/img/home.svg" alt="SEO" /></span>
                       <span className="text-[16px] text-[#424242] flex items-center gap-2">دوره های من <img
-                            src="assets/img/folder-open.svg" alt="SEO" /></span>
+                            src="/assets/img/folder-open.svg" alt="SEO" /></span>
                       <span className="text-[16px] text-[#424242] flex items-center gap-2">تیکت ها <img
-                            src="assets/img/messages.svg" alt="SEO" /></span>
+                            src="/assets/img/messages.svg" alt="SEO" /></span>
                       <span className="text-[16px] text-[#424242] flex items-center gap-2">جزئیات حساب <img
-                            src="assets/img/user-square.svg" alt="SEO" /></span>
+                            src="/assets/img/user-square.svg" alt="SEO" /></span>
                     </div>
                     <span className="h-[1px] w-[210px] bg-[#B7B7B7]"></span>
                     <span className="text-right text-[#FA7070] mt-4 flex items-center gap-2">
                       خروج
-                      <img src="assets/img/logout.svg" alt="SEO" />
+                      <img src="/assets/img/logout.svg" alt="SEO" />
                     </span>
                 </div>
               </button>
@@ -192,7 +192,7 @@ function MenuPanel({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: bool
     >
       <div className="parent-panel header-dashboard grid grid-cols-1 gap-y-3 divide-y">
          <div className="logo-and-close flex items-center justify-between" onClick={() => setMobileMenuOpen(false)}>
-            <img className="w-[100px]" src="assets/img/NewLogo 1.png" alt="SEO" />
+            <img className="w-[100px]" src="/assets/img/NewLogo 1.png" alt="SEO" />
             <div className="flex gap-2">
                <div
                   className="theme w-[50px] h-[50px] flex items-center justify-center p-3 rounded-full bg-[#5757570d] dark:bg-[#ffffff0d]">
@@ -218,7 +218,7 @@ function MenuPanel({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: bool
          <div
             className="search-box bg-[#F3F4F6] dark:bg-[#FFFFFF0D] flex p-1.5 border-l-[1px] border-[#64748B] items-center gap-2 width-[300px] rounded-[15px]">
             <button className="bg-[transparent] border-none w-[30px]" type="submit">
-               <img className="w-full pl-1" src="assets/img/search-icon.svg" alt="SEO" />
+               <img className="w-full pl-1" src="/assets/img/search-icon.svg" alt="SEO" />
             </button>
             <input className="border-[0] bg-[transparent] dark:text-white focus:outline-none font-[dana] w-auto p-1"
                placeholder="دنبال چه دوره ای هستی؟" type="text" />

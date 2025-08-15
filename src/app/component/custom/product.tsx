@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import React from 'react'
 import { IGetProductData } from '@/types/index';
+import Link from 'next/link';
 
 function PrdBoxing({data}: {data: IGetProductData[]}) {
   let numDis: number = 0;
@@ -48,6 +49,7 @@ function PrdBoxing({data}: {data: IGetProductData[]}) {
             numDis= product.discount,
             numPrc = product.price ,
             <SwiperSlide key={index} className="transition-all duration-300 hover:cursor-pointer" dir='rtl'>
+              <Link href={`/product/${product.id}`} prefetch ={false}>
               <div className='py-6 relative hover:scale-95 transition-all duration-300'>
                 <div className="w-48 bg-gradient-to-b from-[#0e804992] via-[#f7fffb02] to-[#2FAF7200] absolute z-10 left-[50%] translate-x-[-50%] top-20 flex justify-center overflow-hidden rounded-xl rounded-t-full transition-all duration-300">
                   <img className='w-full' src={product.image_url} alt="" />
@@ -90,7 +92,8 @@ function PrdBoxing({data}: {data: IGetProductData[]}) {
                     </div>
                   </div>
                 </div>
-              </div>  
+              </div>
+              </Link>
             </SwiperSlide>
         ))}
         </Swiper>
@@ -98,7 +101,7 @@ function PrdBoxing({data}: {data: IGetProductData[]}) {
   )
 }
 
-function ProdCart({data}: {data: IGetProductData[]}) {
+function ProdCart({data, slidesPerView}: {data: IGetProductData[], slidesPerView:[number, number, number, number, number]}) {
   let numDis:number = 0;
   let numPrc:number = 0;
   return(
@@ -112,33 +115,27 @@ function ProdCart({data}: {data: IGetProductData[]}) {
             breakpoints={{
                 0:{
                     direction: 'vertical',
-                    slidesPerView: 4,
+                    slidesPerView: slidesPerView[0],
                     spaceBetween: 10,
-                },
-                640: {
-                    direction: 'vertical',
-                    slidesPerView: 4,
-                    spaceBetween: 10,
-
                 },
                 768: {
                     direction: 'horizontal',
-                    slidesPerView: 2,
+                    slidesPerView: slidesPerView[1],
                     spaceBetween: 20,
                     grid: {
                         rows: 2,
                     },
                 },
                 1024: {
-                    slidesPerView: 3,
+                    slidesPerView: slidesPerView[2],
                     spaceBetween: 25,
                 },
                 1280: {
-                    slidesPerView: 4,
+                    slidesPerView: slidesPerView[3],
                     spaceBetween: 20,
                 },
                 1536: {
-                    slidesPerView: 5,
+                    slidesPerView: slidesPerView[4],
                     spaceBetween: 25,
                 },
             }}
@@ -149,6 +146,7 @@ function ProdCart({data}: {data: IGetProductData[]}) {
             numPrc= product.price,
             numDis > 0 ? 
               <SwiperSlide key={index} className="transition-all duration-300 hover:cursor-pointer" dir='rtl'>
+                <Link href={`/product/${product.id}`} prefetch ={false}>
                 <div className='relative hover:scale-95 transition-all duration-300 mx-auto flex justify-center'>
                   <div className='flex max-w-100 sm:max-w-125 md:max-w-75 flex-row md:flex-col relative overflow-hidden items-center justify-start gap-6 md:px-8 px-4 py-1 transition-all duration-300 bg-white border rounded-2xl group hover:shodow-xl dark:bg-gray-800 md:py-6 border-black/20 dark:border-white/5'>
                     <div className="1">
@@ -196,6 +194,7 @@ function ProdCart({data}: {data: IGetProductData[]}) {
                     </div>
                   </div>
                 </div>  
+                </Link>
               </SwiperSlide>    
             : null      
           ))}

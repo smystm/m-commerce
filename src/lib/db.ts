@@ -7,7 +7,7 @@ export const supabase = createClient(
   
 );
 
-// products
+// products Types
 export async function getProducts() {
   const { data, error } = await supabase
     .from('products')
@@ -16,7 +16,7 @@ export async function getProducts() {
   return data;
 }
 
-// categories
+// categories Types
 export async function getCategories() {
   const { data, error } = await supabase
     .from('categories')
@@ -25,7 +25,7 @@ export async function getCategories() {
   return data;
 }
 
-// sliders
+// sliders Types
 export async function getSliders() {
   const { data, error } = await supabase
     .from('sliders')
@@ -34,7 +34,7 @@ export async function getSliders() {
   return data;
 }
 
-// faqs
+// faqs Types
 export async function getFaqs() {
   const { data, error } = await supabase
     .from('faqs')

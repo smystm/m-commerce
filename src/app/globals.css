@@ -82,6 +82,28 @@ body {
   @apply text-white;
 }
 
+/* Swiper Product dynamic pages (albums) */
+.albums .swiper {
+  padding: 15px;
+}
+.albums .swiper-button-next::after,
+.albums .swiper-button-prev::after {
+  @apply text-black dark:text-white text-xs;
+}
+
+.albums .swiper-button-next{
+  @apply rounded-2xl me-[-8px]; 
+}
+.albums .swiper-button-prev{
+  @apply rounded-2xl ms-[-8px];
+}
+
+.albums .swiper-button-next:hover,
+.albums .swiper-button-prev:hover {
+  @apply text-white;
+}
+
+
 
 
 

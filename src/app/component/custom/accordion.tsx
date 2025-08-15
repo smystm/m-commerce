@@ -19,7 +19,7 @@ export default function Accordion({data}: {data: IGetFaqs[]}) {
           <button className={`w-full text-left px-4 py-3 flex items-center justify-between ${isOpen ? "underline font-semibold" : "font-medium"} transition-all duration-300 `} onClick={()=> toggleAccordion(index)}>
             <span>{data.question}</span>
             <span
-              className={`transition-transform duration-300 text-xs text-gray-300 dark:text-gray-500 `}
+              className={`transition-all duration-300 text-xs text-gray-300 dark:text-gray-500 `}
               style={{ transform: `rotate(${isOpen ? 270 : 90}deg)` }}
             >
               ❯

@@ -37,7 +37,7 @@ export default function Footer() {
             <div className="enamad-parent flex flex-col my-5 xl:my-0">
                <strong className="title-content dark:text-[#FFFFFF] text-[16px] lg:text-[20px]"> راهنمای خرید </strong>
                <div className=" w-fit flex justify-center items-center mt-4 px-2 py-2 border border-black/10 bg-white/25 dark:bg-gray-300/75 rounded-xl">
-                  <img src="./assets/img/enamd-footer.png" alt="SEO" />
+                  <img src="/assets/img/enamd-footer.png" alt="SEO" />
                </div>
             </div>
          </div>
