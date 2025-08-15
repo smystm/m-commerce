@@ -7,7 +7,7 @@ import Heroprd from '@/app/component/custom/heroprd';
 import Showdetail from '@/app/component/custom/showdetail';
 import { ProdCart } from "@/app/component/custom/product";
 
-export default async function ProductPage({ params }: { params: { id: string } }) {
+export default async function ProductPage({ params }: any) {
 
   const productsData = await getProducts() as IGetProductData[];
   const product = productsData.find(p => p.id === Number(params.id));
