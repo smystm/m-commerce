@@ -1,20 +1,19 @@
-import React from 'react'
+import React from 'react';
 import Section from '@/app/component/ui/section';
 import Ttlsec from '@/app/component/ui/ttlsec';
-import { getProducts } from '@/lib/db'
-import { IGetProductData } from '@/types'
+import { getProducts } from '@/lib/db';
+import { IGetProductData } from '@/types';
 import Heroprd from '@/app/component/custom/heroprd';
 import Showdetail from '@/app/component/custom/showdetail';
-import {ProdCart} from "@/app/component/custom/product";
+import { ProdCart } from "@/app/component/custom/product";
 
-type PageProps = {
-  params: { id: string }
-}
-export default async function ProductPage({params}: PageProps) {
+export default async function ProductPage({ params }: { params: { id: string } }) {
 
   const productsData = await getProducts() as IGetProductData[];
-  const product:IGetProductData = productsData.find(p => p.id === Number(params.id));
-  if (!product) return <div>محصول پیدا نشد</div>; //Render 404 Component!!
+  const product = productsData.find(p => p.id === Number(params.id));
+
+  if (!product) return <div>محصول پیدا نشد</div>;
+
   return (
     <div>
       <Section className='lg:w-11/12 max-w-[1180px] flex flex-col items-center py-8 md:py-12 lg:py-18'>
@@ -27,7 +26,7 @@ export default async function ProductPage({params}: PageProps) {
         <Ttlsec ttl='محصولات مشابه' desc='' isLnk={true} txtLnk='مشاهده تمام محصولات' classLnk='text-green-800 hover:text-green-600'>
           {''}
         </Ttlsec>
-        <ProdCart slidesPerView={[4,2,3,4,4]} data={productsData}></ProdCart>
+        <ProdCart slidesPerView={[4,2,3,4,4]} data={productsData}/>
       </Section>
     </div>
   );
